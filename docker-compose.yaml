@@ -4,10 +4,10 @@ tinymediamanager_service:
     ports:
       - "5803:5800"
     environment:
-      - USER_ID=0
-      - GROUP_ID=0
-      - TZ=Europe/Madrid
+      - USER_ID=1000
+      - GROUP_ID=100
+      - TZ=Europe/Berlin
       - VNC_PASSWORD=password
     volumes:
-      - "/share/Container/tinymediamanager:/config:rw"
-      - "/share/Container/tinymediamanager/media:/media:rw"
+      - "$TMM_CONFIG_PATH:/config:rw"
+      - "$TMM_MEDIA_PATH:/media:rw"
