@@ -1,6 +1,7 @@
 tinymediamanager_service:
     image: romancin/tinymediamanager:latest
     container_name: tinymediamanager
+    restart: unless-stopped
     ports:
       - "5803:5800"
     environment:
