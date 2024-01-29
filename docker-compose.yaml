@@ -1,14 +1,15 @@
-tinymediamanager:
-    image: romancin/tinymediamanager:latest
-    container_name: tinymediamanager
-    restart: unless-stopped
-    ports:
-      - "5803:5800"
-    environment:
-      - USER_ID=1000
-      - GROUP_ID=100
-      - TZ=Europe/Berlin
-      - VNC_PASSWORD=password
-    volumes:
-      - "$TMM_CONFIG_PATH:/config:rw"
-      - "$TMM_MEDIA_PATH:/media:rw"
+services:
+    tinymediamanager:
+        image: romancin/tinymediamanager:latest
+        container_name: tinymediamanager
+        restart: unless-stopped
+        ports:
+          - "5803:5800"
+        environment:
+          - USER_ID=1000
+          - GROUP_ID=100
+          - TZ=Europe/Berlin
+          - VNC_PASSWORD=password
+        volumes:
+          - "$TMM_CONFIG_PATH:/config:rw"
+          - "$TMM_MEDIA_PATH:/media:rw"
