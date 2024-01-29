@@ -1,4 +1,4 @@
-tinymediamanager_service:
+tinymediamanager:
     image: romancin/tinymediamanager:latest
     container_name: tinymediamanager
     restart: unless-stopped
